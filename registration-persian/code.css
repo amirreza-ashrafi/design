@@ -1,0 +1,162 @@
+@font-face {
+    font-family: yekan;
+    src: url("../../fonts\B_Yekan\Yekan.ttf");
+}
+:root{
+    --wrapper-color: #ffffff;
+    --background-color: #fec107;
+    --label-color: #757575;
+    --border-color: #d5dbd9;
+    --selector-color: #d5dbd9;
+}
+* {
+    direction: rtl;
+    text-align: right !important;
+    padding: 0;
+    margin: 0;
+    font-family: yekan, serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+body {
+    background: #fec107;
+    padding: 0 10px;
+}
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background: var(--wrapper-color);
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.15);
+}
+
+.wrapper .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center !important;
+    color: var(--background-color);
+}
+.wrapper .form {
+    width: 100%;
+}
+.wrapper .form .input-section {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+.wrapper .form .input-section label {
+    width: 200px;
+    color: var(--label-color);
+    font-size: 16px;
+    margin-left: 10px;
+}
+.wrapper .form .input-section .input,
+.wrapper .form .input-section .textarea{
+    width: 100%;
+    outline: none;
+    padding: 2px 15px;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.wrapper .form .input-section .textarea {
+    resize: none;
+    height: 125px;
+}
+.wrapper .form .input-section .select-custom {
+    position: relative;
+    left: 0.8%;
+    width: 100%;
+    height: 35px;
+}
+.wrapper .form .input-section .select-custom .select {
+    appearance: none;
+    height: 100%;
+    width: 101.2%;
+    outline: none;
+    padding: 2px 15px;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+}
+.wrapper .form .input-section .select-custom:after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    border: 8px solid;
+    border-color: var(--selector-color) transparent transparent transparent;
+    pointer-events: none;
+}
+.wrapper .form .input-section .input:focus,
+.wrapper .form .input-section .textarea:focus,
+.wrapper .form .input-section .select-custom .select:focus{
+    border: 1px solid var(--background-color);
+}
+.wrapper .form .input-section p{
+    font-size: 15px;
+    color: var(--label-color);
+    position: relative;
+    top: 10px;
+}
+.wrapper .form .input-section .check {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.wrapper .form .input-section .check input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+.wrapper .form .input-section .check .checkmark {
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+.wrapper .form .input-section .check .checkmark:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 10px;
+    height: 3px;
+    border: 3px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+.wrapper .form .input-section .check .checkmark:focus .checkmark:before{
+    display: block;
+}
+.wrapper .form .input-section .check input[type=checkbox]:checked ~ .checkmark{
+    background: var(--background-color);
+}
+.wrapper .form .input-section .check input[type=checkbox]:checked ~ .checkmark:before{
+    display: block;
+}
+.wrapper .form .input-section .submit {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background: var(--background-color);
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+    text-align: center !important;
+}
+.wrapper .form .input-section .submit:hover {
+     background-color: #ffd658;
+ }
+.wrapper .form .input-section:last-child {
+    margin-bottom: 0;
+}
